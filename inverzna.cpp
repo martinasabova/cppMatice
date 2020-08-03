@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include "zlomok.h"
+#include "funkcie.h"
 #include "inverzna.h"
 
 void inverzna()

@@ -138,7 +138,9 @@ void notNumber::getMsg() const
 	std::cout <<msg <<std::endl;
 }
 
+
 void notPositive::getMsg() const
 {
 	std::cout <<msg <<std::endl;
 }
+

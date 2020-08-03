@@ -1,5 +1,6 @@
 #include <iostream>
 #include "zlomok.h"
+#include "funkcie.h"
 #include "determinant.h"
 
 void determinant()

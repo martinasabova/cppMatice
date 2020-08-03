@@ -63,7 +63,7 @@ void uvolni (Zlomok ** matica, int kolko, Zlomok *korienky);
 
 
 
-int otestujKladneCislo();
+
 
 
 
