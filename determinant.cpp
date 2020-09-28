@@ -6,7 +6,6 @@
 void determinant()
 {
 	int n;
-
 	std::cout <<"rozmer: ";
 	n=otestujKladneCislo();
 	Zlomok * matica;
@@ -23,6 +22,12 @@ void determinant()
 	Zlomok determinant=vypocitaj(matica, n);
 	std::cout <<std::endl <<"determinant" <<std::endl <<determinant <<std::endl;
 	delete [] matica;
+}
+
+void determinant(Zlomok *matrix, int rozmer)
+{
+	Zlomok determinant=vypocitaj(matrix, rozmer);
+	std::cout <<std::endl <<"determinant" <<std::endl <<determinant <<std::endl;
 }
 
 void nacitaj(int kolko, Zlomok * matrix)

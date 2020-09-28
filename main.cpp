@@ -1,5 +1,4 @@
 #include <iostream>
-#include <limits>
 #include "zlomok.h"
 #include "funkcie.h"
 #include "determinant.h"

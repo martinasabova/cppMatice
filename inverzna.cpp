@@ -33,6 +33,26 @@ void inverzna()
 	uvolni(nemeniaca,rozmer);
 }
 
+void inverzna(Zlomok * matica, int rozmer)
+{
+	Zlomok **povodna;
+	Zlomok **inverzna;
+	alokuj(&povodna, rozmer);
+	alokuj(&inverzna, rozmer);
+	nacitajPovodnu(povodna,rozmer,matica);
+	spravJednotkovu(inverzna,rozmer);
+	if(vypocitajInverznu(povodna, inverzna, rozmer)==1)	//aby sa nahodou nedelilo nulou
+	{
+		uvolni(povodna,rozmer);
+		uvolni(inverzna,rozmer);
+		exit(0);
+	}
+	std::cout <<"Inverzna:" <<std::endl;
+	vypis(inverzna,rozmer);
+	uvolni(povodna,rozmer);
+	uvolni(inverzna,rozmer);
+}
+
 void alokuj (Zlomok ***matica, int hodnost)
 {
 	try
@@ -59,6 +79,19 @@ void nacitajPovodnu(Zlomok **maticaMeni, Zlomok ** maticaNemeni, int hodnost)
 		{
 			std::cin >>(*((*(maticaMeni+i))+j));
 			*((*(maticaNemeni+i))+j)=*((*(maticaMeni+i))+j);
+		}
+	}
+}
+
+void nacitajPovodnu(Zlomok **maticaMeni, int hodnost, Zlomok *maticaRiadok)
+{
+	int k=0;	//posun v riadkovej matici
+	for (int i=0; i<hodnost; ++i)
+	{
+		for (int j=0; j<hodnost; ++j)
+		{
+			*((*(maticaMeni+i))+j)=*(maticaRiadok+k);
+			++k;
 		}
 	}
 }

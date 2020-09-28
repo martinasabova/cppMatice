@@ -82,8 +82,31 @@ int zistiCo()
 
 void obe()
 {
-	determinant();
-	inverzna();
+	int n; //rozmer matice
+	std::cout <<"Rozmer matice: " <<std::endl;
+	n=otestujKladneCislo();
+	Zlomok *nacitana;
+	try
+	{
+		nacitana=new Zlomok [n*n];
+	}
+	catch (std::bad_alloc &ba)
+	{
+		std::cout <<ba.what() <<std::endl;
+		exit(EXIT_FAILURE);
+	}
+	for (int i=0; i<n*n; ++i)
+	{
+		if(i%n==0)
+		{
+			std::cout <<i/n+1 <<" riadok: ";
+		}
+		std::cin >>*(nacitana+i);
+	}
+	inverzna(nacitana,n);
+	determinant(nacitana,n);
+	delete [] nacitana;
+
 }
 
 void wrongNumber::getMsg() const

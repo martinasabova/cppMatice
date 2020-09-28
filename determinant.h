@@ -2,6 +2,7 @@
 #define MATICE_DETERMINANT_H
 
 void determinant();
+void determinant(Zlomok *matrix, int rozmer);
 void nacitaj(int kolko, Zlomok * matrix);
 Zlomok vypocitaj (Zlomok * pole, int velkost);
 
