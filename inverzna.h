@@ -9,8 +9,8 @@ void nacitajPovodnu(Zlomok **maticaMeni, int hodnost, Zlomok *maticaRiadok); //k
 void spravJednotkovu(Zlomok **matica, int hodnost);	//inverznu maticu najskor nastavi na jednotkovu
 int vypocitajInverznu(Zlomok ** maticaP, Zlomok ** maticaI, int hodnost);
 int skontroluj (Zlomok **matica, int kolko);	//skontroluje, ci inverzna existuje
-void vynasob (Zlomok **maticaP, Zlomok ** maticaI, int kolko);
-void spravVynulovanu (Zlomok ** matica, int kolko);
+void vynasob (Zlomok **maticaP, Zlomok ** maticaI, int kolko);	//vynasobi povodnu a inverznu
+void spravVynulovanu (Zlomok ** matica, int kolko);	//vynuluje celu maticu
 void uvolni (Zlomok ** matica, int hodnost);
 void vypis(Zlomok**matica, int kolko);
 

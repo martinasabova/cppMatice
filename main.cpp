@@ -10,4 +10,4 @@ int main()
 	void (*pFunkcie[]) ()={determinant, inverzna, obe, rovnice};
 	pFunkcie[zistiCo()-1]();
 	return 0;
-}
+} 

@@ -11,7 +11,7 @@ void rovnice()
 	sustavaRovnic::alokuj(&sustava, n);
 	nacitaj(sustava, n);
 	vypocitaj(sustava, n);
-	if(sustavaRovnic::skontroluj(sustava,n)==1)
+	if(sustavaRovnic::skontroluj(sustava,n)==1)	//ci ma riesenie alebo pripadne nekonecne vela
 	{
 		sustavaRovnic::uvolni(sustava, n);
 		exit(0);
@@ -29,7 +29,7 @@ void sustavaRovnic::alokuj(Zlomok ***matica, int kolko)
 		*matica = new Zlomok * [kolko];
 		for (int i=0; i<kolko; ++i)
 		{
-			*(*matica+i)= new Zlomok [kolko+1];
+			*(*matica+i)= new Zlomok [kolko+1];	//stlpcov ma o jeden viac, lebo je tam prava strana rovnice
 		}
 	}
 	catch(std::bad_alloc &ba)

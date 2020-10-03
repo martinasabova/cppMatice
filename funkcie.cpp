@@ -95,8 +95,8 @@ void obe()
 		std::cout <<ba.what() <<std::endl;
 		exit(EXIT_FAILURE);
 	}
-	for (int i=0; i<n*n; ++i)
-	{
+	for (int i=0; i<n*n; ++i) //nacitava do jednorozmerneho pola, lebo potom sa z toho
+	{						  //pocita determinat a pre vypocet inverznej sa lahko upravi
 		if(i%n==0)
 		{
 			std::cout <<i/n+1 <<" riadok: ";

@@ -49,22 +49,5 @@ public:
 	void getMsg () const;
 };
 
-/*
-void alokuj (Zlomok *** matica, int kolko);
-void alokuj (Zlomok **korienky, int kolko);
-void nacitaj(Zlomok **matica, int kolko);
-void vypis(Zlomok **matica, int kolko);
-void vypis (const Zlomok *korienky, int kolko);
-void uprav(Zlomok **matica, int kolko);
-void vypocitajKorene(Zlomok **matica, int kolko, Zlomok *korienky);
-void uvolni (Zlomok ** matica, int kolko, Zlomok *korienky);
-*/
-
-
-
-
-
-
-
 
 #endif //MATICE_ZLOMOK_H

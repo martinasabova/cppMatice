@@ -2,8 +2,8 @@
 #define MATICE_FUNKCIE_H
 
 int otestujKladneCislo();
-int zistiCo();
-void obe();
+int zistiCo();	//urci, co sa ma pocitat
+void obe();	//pocita determinant aj inverznu maticu
 
 class wrongNumber
 {

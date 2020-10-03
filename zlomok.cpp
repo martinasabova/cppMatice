@@ -143,4 +143,3 @@ void notPositive::getMsg() const
 {
 	std::cout <<msg <<std::endl;
 }
-

@@ -5,8 +5,8 @@
 
 void determinant()
 {
-	int n;
-	std::cout <<"rozmer: ";
+	int n; //rozmer
+	std::cout <<"Rozmer: ";
 	n=otestujKladneCislo();
 	Zlomok * matica;
 	try
@@ -20,14 +20,14 @@ void determinant()
 	}
 	nacitaj(n, matica);
 	Zlomok determinant=vypocitaj(matica, n);
-	std::cout <<std::endl <<"determinant" <<std::endl <<determinant <<std::endl;
+	std::cout <<std::endl <<"Determinant" <<std::endl <<determinant <<std::endl;
 	delete [] matica;
 }
 
 void determinant(Zlomok *matrix, int rozmer)
 {
 	Zlomok determinant=vypocitaj(matrix, rozmer);
-	std::cout <<std::endl <<"determinant" <<std::endl <<determinant <<std::endl;
+	std::cout <<std::endl <<"Determinant" <<std::endl <<determinant <<std::endl;
 }
 
 void nacitaj(int kolko, Zlomok * matrix)
@@ -46,10 +46,8 @@ Zlomok vypocitaj (Zlomok * pole, int velkost)
 {
 	if(velkost*velkost==4)	//ak je matica 2x2, vypocita to rovno determinant
 	{
-		//printf ("Matica %d %d %d %d\n",*pole, *(pole+1), *(pole+2), *(pole+3));
 		Zlomok a=(*pole)*(*(pole+3));
 		Zlomok b=(*(pole+1))*(*(pole+2));
-		//printf("return %d\n",a-b);
 		return a-b;
 	}
 	Zlomok vysledok(0,1);
