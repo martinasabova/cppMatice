@@ -17,7 +17,7 @@ void inverzna()
 	nacitajPovodnu(povodna,nemeniaca,rozmer);
 	spravJednotkovu(inverzna,rozmer);
 	std::cout <<"Povodna:" <<std::endl;
-	vypis(nemeniaca,rozmer);
+	//vypis(nemeniaca,rozmer);
 	if(vypocitajInverznu(povodna, inverzna, rozmer)==1)	//aby sa nahodou nedelilo nulou
 	{
 		uvolni(povodna,rozmer);
@@ -27,7 +27,7 @@ void inverzna()
 	}
 	std::cout <<"Inverzna:" <<std::endl;
 	vypis(inverzna,rozmer);
-	vynasob(nemeniaca, inverzna, rozmer);
+	//vynasob(nemeniaca, inverzna, rozmer);
 	uvolni(povodna,rozmer);
 	uvolni(inverzna,rozmer);
 	uvolni(nemeniaca,rozmer);
